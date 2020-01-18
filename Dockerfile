@@ -1,9 +1,9 @@
-FROM node:12.4-alpine
+FROM node:13.6-alpine
 
 LABEL authors="Dmitry Erman <dmitry.erman@gmail.com>"
 LABEL maintainer="Dmitry Erman <dmitry.erman@gmail.com>"
 
-ARG DOCKER_CLI_VERSION="18.09.8"
+ARG DOCKER_CLI_VERSION="19.03.5"
 ENV DOWNLOAD_URL="https://download.docker.com/linux/static/stable/x86_64/docker-$DOCKER_CLI_VERSION.tgz"
 
 # Base APK installs
@@ -32,8 +32,8 @@ RUN mkdir -p /tmp/download \
     && rm -rf /tmp/download
 
 
-# Angular Setup for 8.0.6 client
-RUN yarn global add @angular/cli@8.0.6
+# Angular Setup for 8.3.23 client
+RUN yarn global add @angular/cli@8.3.23
 
 RUN apk del alpine-sdk \
   && rm -rf /tmp/* /var/cache/apk/* *.tar.gz ~/.npm \
