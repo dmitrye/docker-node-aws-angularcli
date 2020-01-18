@@ -1,0 +1,22 @@
+name: Docker Node AWS AngularCLI Image
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    env:
+      VERSION: "1.5"  
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build the Docker image
+      run: 
+        docker login -u ${{ secrets.DockerHubUser }} -p ${{ secrets.DockerHubPassword }}
+        docker build -t nopuck4you/docker-node-awscli-angularcli:$VERSION -t nopuck4you/docker-node-awscli-angularcli:latest .
+        docker push nopuck4you/docker-node-awscli-angularcli:$VERSION
+        docker push nopuck4you/docker-node-awscli-angularcli:latest
