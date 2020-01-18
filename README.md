@@ -2,8 +2,8 @@
 Node + Alpine + Docker + AWS + Angular-Cli
 ```
 
-**@angular/cli:** 1.5.6<br/>
-**node:** 10.5.0<br/>
+**@angular/cli:** 8.0.6<br/>
+**node:** 12.4.0-alpine<br/>
 **os:** linux x64<br/>
 **docker hub:** https://hub.docker.com/r/dmitrye/docker-node-aws-angularcli/
 
