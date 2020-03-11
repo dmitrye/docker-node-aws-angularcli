@@ -32,8 +32,8 @@ RUN mkdir -p /tmp/download \
     && rm -rf /tmp/download
 
 
-# Angular Setup for 8.3.23 client
-RUN yarn global add @angular/cli@8.3.23
+# Angular Setup for 9.0.5 client
+RUN yarn global add @angular/cli@9.0.5
 
 RUN apk del alpine-sdk \
   && rm -rf /tmp/* /var/cache/apk/* *.tar.gz ~/.npm \
