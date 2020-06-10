@@ -35,6 +35,7 @@ RUN mkdir -p /tmp/download \
 # Angular Setup for 9.1.7 client
 RUN yarn global add @angular/cli@9.1.7
 
+
 RUN apk del alpine-sdk \
   && rm -rf /tmp/* /var/cache/apk/* *.tar.gz ~/.npm \
   && npm cache clean --force \
