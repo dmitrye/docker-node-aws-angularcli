@@ -32,7 +32,7 @@ RUN mkdir -p /tmp/download \
     && rm -rf /tmp/download
 
 
-# Angular Setup for 9.0.5 client
+# Angular Setup for 9.1.7 client
 RUN yarn global add @angular/cli@9.1.7
 
 RUN apk del alpine-sdk \
