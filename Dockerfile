@@ -1,4 +1,4 @@
-FROM node:14.7-alpine
+FROM node:18.14-alpine
 
 LABEL authors="Dmitry Erman <dmitry.erman@gmail.com>"
 LABEL maintainer="Dmitry Erman <dmitry.erman@gmail.com>"
@@ -33,7 +33,7 @@ RUN mkdir -p /tmp/download \
 
 
 # Angular Setup for 11.2.3 client
-RUN yarn global add @angular/cli@11.2.3
+RUN yarn global add @angular/cli@13.3.8
 
 
 RUN apk del alpine-sdk \
