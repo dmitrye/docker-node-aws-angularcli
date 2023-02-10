@@ -32,8 +32,8 @@ RUN mkdir -p /tmp/download \
     && rm -rf /tmp/download
 
 
-# Angular Setup for 11.2.3 client
-RUN yarn global add @angular/cli@13.3.8
+# Angular Setup for client
+RUN yarn global add @angular/cli@15.1.5
 
 
 RUN apk del alpine-sdk \
