@@ -8,9 +8,9 @@ ENV DOWNLOAD_URL="https://download.docker.com/linux/static/stable/x86_64/docker-
 
 # Base APK installs
 RUN apk --no-cache add --update \
-  python \
-  python-dev \
-  py-pip \
+  python3 \
+  python3-dev \
+  py3-pip \
   build-base \
   alpine-sdk \
   bash git openssh \
